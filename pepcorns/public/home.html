@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pepcorns</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css"
+    />
+    <!-- Flowbite -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flowbite@1.5.2/dist/flowbite.min.css"
+    />
+    <script src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script>
+    <style>
+      /*FAQS*/
+      .faq_question {
+        margin: 0px;
+        padding: 0px 0px 5px 0px;
+        display: inline-block;
+        cursor: pointer;
+      }
+
+      .faq_answer_container {
+        height: 0px;
+        overflow: hidden;
+        padding: 0px;
+      }
+    </style>
+
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-3.6.0.min.js"
+    ></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {},
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-[#f8f9fe] md:px-4 md:px-32">
+    <nav
+      class="navbar bg-[#5e72e4] text-white text-[16px] md:px-8 py-5 grid-inline"
+    >
+      <p class="font-medium pt-3 text-[18px]">- Welcome John.</p>
+      <div class="profile-pic grid place-content-end -mt-6">
+        <button
+          class="mb-3 rounded"
+          type="button"
+          onclick="openDropdown(event,'dropdown-id')"
+        >
+          <img
+            class="w-10 h-10 relative rounded-full"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnNEGd_0C7SMlckxJD2HCR5vBWwGlBOSWrlD83IUBYUA&s"
+            alt="Profile"
+          />
+        </button>
+        <div
+          class="hidden inline float-right bg-[#ffffff] text-black text-[16px] rounded-sm border shadow-md my-4"
+          style="min-width: 12rem"
+          id="dropdown-id"
+        >
+          <div class="py-2 px-4">
+            <a href="#"> Dashboard </a>
+          </div>
+          <hr />
+          <div class="py-2 px-4">
+            <a href="https://pepcorns.com/"> Home </a>
+          </div>
+          <hr />
+          <div class="py-2 px-4">
+            <a href="#logout"> Logout </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container px-2 py-2">
+      <!-- Profile Information -->
+      <div class="profile grid grid-cols-1 md:grid-cols-6 py-4">
+        <div class="profile-pic grid place-content-center">
+          <img
+            class="mb-1 w-24 h-24 rounded-full shadow-lg"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnNEGd_0C7SMlckxJD2HCR5vBWwGlBOSWrlD83IUBYUA&s"
+            alt="Profile Pic"
+          />
+        </div>
+        <div class="profile-info col-span-5 text-center md:text-justify">
+          <span class="profile-name text-[36px] font-semibold leading3">
+            John Smith
+          </span>
+          <div class="profile-address grid md:grid-cols-5">
+            <div class="col-span-3">
+              <span class="inline text-[16px]"> Mumbai, Maharashtra.</span>
+              <div class="py-2">
+                <span class="py-1 text-[16px]">
+                  Email :
+                  <span class="text-[#66a3f2] underline"
+                    >lentzrent@gmail.com</span
+                  >
+                  | Website :
+                  <span class="text-[#66a3f2] underline"
+                    ><a href="https://letzrent.com/"
+                      >https://letzrent.com</a
+                    ></span
+                  >
+                  | PAN/TAN :
+                  <span class="text-[#66a3f2] underline">AAJCR3294F</span></span
+                ><br />
+                <span class="text-[14px] pr-6"
+                  >Online search, compare & booking platform for self-drive
+                  cars, charter flights, living space & more that rewards
+                  users.</span
+                >
+              </div>
+            </div>
+            <div class="col-span-1 text-[16px] text-center text-[#5e72e4]">
+              <span class="px-2"
+                ><a class="hover:text-blue-800" href="#"
+                  ><i class="fa fa-plus" aria-hidden="true"></i> Follow</a
+                ></span
+              >
+              <span class="px-2"
+                ><a class="hover:text-blue-800" href="#"
+                  ><i class="fa fa-share-alt" aria-hidden="true"></i> Share</a
+                ></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Category -->
+      <div class="category py-4 md:px-10 text-[12px] font-semibold">
+        <span class="inline px-2 bg-[#f5365c] py-1 rounded-md text-white"
+          >GEN Z FOUNDER</span
+        >
+        <span class="inline px-2">MOBILITY</span>
+        <span class="inline px-2">E-COMMERCE</span>
+      </div>
+      <!-- Content -->
+      <div class="grid grid-cols-1 md:grid-cols-6">
+        <div class="grid col-span-4">
+          <!-- Youtube video Link-->
+          <div class="w-full hidden md:grid px-2">
+            <span class="text-[14px] font-semibold py-2 hover:text-[#5e72e4]"
+              ><a href="https://youtu.be/biGcDeB2PbQ"
+                >Unable to view video? Click here.</a
+              ></span
+            >
+            <div
+              class="bg-[##ffffff] rounded-tr-lg shadow-lg grid justify-center"
+            >
+              <iframe
+                width="800"
+                height="450"
+                class="rounded-tr-lg"
+                src="https://www.youtube.com/embed/biGcDeB2PbQ"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <div
+                class="grid grid-cols-3 place-content-center py-3 text-[14px]"
+              >
+                <span class="grid text-center"
+                  ><a
+                    ><i
+                      class="fa fa-map-marker text-[#fe0000]"
+                      aria-hidden="true"
+                    ></i>
+                    Mumbai, Maharashtra</a
+                  ></span
+                >
+                <span class="grid text-center"
+                  ><a href="https://letzrent.com/">
+                    <i class="fa fa-link text-[#66a3f2]" aria-hidden="true"></i>
+                    Link: https://wwdkljakdf</a
+                  ></span
+                >
+                <span class="flex flex-inline space-x-2 justify-center"
+                  ><a href="#" class="text-[#fe0000] hover:text-black"
+                    ><i class="fa fa-instagram" aria-hidden="true"></i></a
+                  ><a href="#" class="text-[#2563eb] hover:text-black"
+                    ><i
+                      class="fa fa-facebook-official"
+                      aria-hidden="true"
+                    ></i></a
+                  ><a
+                    href="https://youtu.be/biGcDeB2PbQ"
+                    class="text-[#fe0000] hover:text-black"
+                    ><i class="fa fa-youtube-play" aria-hidden="true"></i
+                  ></a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid col-span-2 md:px-4">
+          <!-- Card -->
+          <div class="card bg-[#ffffff] py-2 rounded-lg shadow-lg">
+            <p class="px-10 py-2 text-[42px] font-semibold text-[#5e72e4]">
+              &#8377; 0
+            </p>
+            <p class="px-10 pb-2 text-[16px]">0 % of minimum goal raised</p>
+            <hr class="py-2" />
+            <div class="mid-section px-10">
+              <p class="text-[36px] font-semibold">0</p>
+              <p class="pb-4 text-[16px]">Total Investors</p>
+              <hr class="py-2" />
+              <p class="text-[36px] font-semibold">0 days</p>
+              <p class="pb-4 text-[16px]">Left to Invest</p>
+            </div>
+            <hr />
+            <div class="lower-section px-10 py-5">
+              <button
+                class="bg-[#f5365c] w-full py-2 rounded-md text-white font-medium text-[16px] hover:bg-[#fe0000] focus:ring-4 focus:outline-none focus:ring-[#fe0000] dark:hover:bg-[#fe0000] dark:focus:ring-[#fe0000]"
+              >
+                Campaign Expired
+              </button>
+              <p class="text-center text-[14px] py-2">
+                &#8377;1000 Minimum Investment
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Section II -->
+      <div class="grid grid-cols-1 md:grid-cols-6 pt-10">
+        <!-- Button and related info -->
+        <div class="grid col-span-4 px-2 my-4">
+          <div class="buttons flex space-x-4">
+            <button
+              onclick="pitch()"
+              class="bg-[#ffffff] h-[45px] w-1/4 py-2 rounded-md text-black shadow-lg text-[16px] hover:bg-[#96a3ed] font-medium hover:text-white focus:bg-[#96a3ed] focus:text-white"
+            >
+              <span class="hidden md:block">Pitch</span>
+              <span class="block md:hidden"><i class="fa fa-caret-square-o-down"></i></span>
+            </button>
+            <button
+              onclick="details()"
+              class="bg-[#ffffff] h-[45px] w-1/4 py-2 rounded-md text-black shadow-lg text-[16px] hover:bg-[#96a3ed] font-medium hover:text-white focus:bg-[#96a3ed] focus:text-white"
+            >
+            <span class="hidden md:block">Details</span>
+            <span class="block md:hidden"><i class="fa fa-info-circle"></i></span>
+            </button>
+            <button
+              onclick="updates()"
+              class="bg-[#ffffff] h-[45px] w-1/4 py-2 rounded-md text-black shadow-lg text-[16px] hover:bg-[#96a3ed] font-medium hover:text-white focus:bg-[#96a3ed] focus:text-white"
+            >
+            <span class="hidden md:block">Updates</span>
+            <span class="block md:hidden"><i class="fa fa-cloud-upload"></i></span>
+            </button>
+            <button
+              onclick="comments()"
+              class="bg-[#ffffff] h-[45px] w-1/4 py-2 rounded-md text-black shadow-lg text-[16px] hover:bg-[#96a3ed] font-medium hover:text-white focus:bg-[#96a3ed] focus:text-white"
+            >
+            <span class="hidden md:block">Comments</span>
+            <span class="block md:hidden"><i class="fa fa-commenting"></i></span>
+            </button>
+          </div>
+          <div>
+            <div
+              id="pitch"
+              class="grid px-8 my-8 py-4 bg-[#ffffff] shadow-lg border"
+              style="display: block"
+            >
+              <div class="grid w-full py-4">
+                <p class="w-full text-[24px] font-medium">
+                  DECK
+                  <span class="float-right"
+                    ><button
+                      class="inline-flex items-end text-center w-32 py-2 px-3 ml-2 text-sm font-medium text-white bg-[#96a3ed] rounded-lg border border-[#96a3ed] hover:bg-blue-800"
+                    >
+                      <p class="w-full text-center text-[16px]">
+                        <a href="./pitch.pdf" target="_blank"> Download</a>
+                      </p>
+                    </button></span
+                  >
+                </p>
+              </div>
+              <hr />
+              <div class="grid w-full py-4">
+                <p class="my-3 text-[24px] font-medium">10 Seconds Pitch</p>
+                <p class="text-[16px]">
+                  Online search, compare & booking platform for self-drive cars,
+                  charter flights, living space & more that rewards users.
+                </p>
+              </div>
+              <hr />
+              <div class="grid w-full py-4">
+                <p class="my-3 text-[24px] font-medium">Deck Information</p>
+                <p class="text-[16px]">LetzRent.</p>
+              </div>
+              <hr />
+              <div class="grid w-full py-4">
+                <p class="my-3 text-[24px] font-medium">Highlights</p>
+                <ul class="list-disc text-[16px] pr-4">
+                  <li>Running profitable pilot in Bengaluru.</li>
+                  <li>
+                    20k+ registered users, 4.2 app rating and 10k+ social media
+                    following.
+                  </li>
+                  <li>
+                    Company is projecting 100cr+ transaction volume in 5 years.
+                  </li>
+                  <li>
+                    Founder with the marketing expertise of 17+ years in
+                    Reliance, Naaptol, Tv9 and Zee and more
+                  </li>
+                  <li>GenZ CTO and co-founder.</li>
+                  <li>
+                    Expansion is easy and the untapped customer base is huge.
+                  </li>
+                  <li>Been in news articles, already making buzz.</li>
+                </ul>
+              </div>
+              <hr />
+              <div class="grid w-full py-4">
+                <p class="my-3 text-[24px] font-medium">Traction</p>
+                <div class="grid justify-center py-4">
+                  <img
+                    src="https://images.unlayer.com/projects/15608/1651352968445-10.PNG"
+                    alt="traction-img"
+                  />
+                </div>
+              </div>
+              <hr />
+              <div class="grid w-full py-4">
+                <p class="my-3 text-[24px] font-medium">Smarter Ways To Rent</p>
+                <div class="grid justify-center py-4">
+                  <img
+                    src="https://images.unlayer.com/projects/15608/1651352942115-6.png"
+                    alt="traction-img"
+                  />
+                </div>
+              </div>
+              <hr />
+              <div class="grid w-full py-4">
+                <p class="my-3 text-[24px] font-medium">
+                  Customers Want Low Prices
+                </p>
+                <p class="text-[16px] py-4">
+                  To get low prices 85% of the consumers check at least 2 data
+                  points (Source: BCG Consumer Trends). In various sectors
+                  information centred buying has been made more efficient by
+                  companies like MMT for Travel, Policy bazaar for Insurance,
+                  Myntra or Shopperstop for Lifestyle products. However for
+                  rental products, there is no one & to fill this need and make
+                  the process efficient we launched LetzRent, hoping to have a
+                  first-mover advantage and dominate the market in the coming
+                  future.
+                </p>
+                <div class="grid justify-start py-4">
+                  <img
+                    src="https://images.unlayer.com/projects/15608/1651352925215-3.PNG"
+                    alt="traction-img"
+                  />
+                </div>
+              </div>
+              <hr />
+              <div class="grid w-full py-4">
+                <p class="my-3 text-[24px] font-medium">Single KYC</p>
+                <p class="text-[16px] py-4">
+                  Renting is a KYC dependent process, every time a customer
+                  books a service from a different service provider he/she will
+                  have to get a new KYC done. With Letzrent, the hassle of
+                  multiple KYC gets removed and with a single KYC, customers can
+                  rent from multiple brands.
+                </p>
+              </div>
+              <hr />
+              <div class="grid w-full py-4">
+                <p class="my-3 text-[24px] font-medium">Vast Selection</p>
+                <p class="text-[16px] py-4">
+                  Being an aggregator Letzrent offers more options than category
+                  leaders.
+                </p>
+                <div class="grid justify-start py-4">
+                  <img
+                    src="https://images.unlayer.com/projects/15608/1651352918059-2.png"
+                    alt="traction-img"
+                  />
+                </div>
+              </div>
+              <hr />
+              <div class="grid w-full py-4">
+                <p class="my-3 text-[24px] font-medium">Why Renting?</p>
+                <p></p>
+                <ol class="text-[16px] py-4 list-decimal">
+                  <li>
+                    Demographic Twist: Commitment phobic millennials prefer an
+                    asset lite life with a bias toward renting rather than
+                    buying.
+                  </li>
+                  <li>
+                    Flexibility: Renting allows people to upgrade or change
+                    assets easily.
+                  </li>
+                  <li>
+                    Convenience: With the rental customers dispense with the
+                    headache of down payment, maintenance, insurance etc.
+                  </li>
+                </ol>
+
+                <div class="grid justify-center py-4">
+                  <img
+                    src="https://images.unlayer.com/projects/15608/1651352954073-8.png"
+                    alt="traction-img"
+                  />
+                </div>
+              </div>
+              <hr />
+              <div class="grid w-full py-4">
+                <p class="my-3 text-[24px] font-medium">Vast Selection</p>
+                <div class="grid justify-centervpy-4">
+                  <img
+                    src="https://images.unlayer.com/projects/15608/1651352961142-9.png"
+                    alt="traction-img"
+                  />
+                </div>
+              </div>
+              <hr />
+              <div class="grid w-full py-4">
+                <p class="my-3 text-[24px] font-medium">Competitors</p>
+                <div class="grid justify-start py-4">
+                  <img
+                    src="https://images.unlayer.com/projects/15608/1651352937596-5.PNG"
+                    alt="traction-img"
+                  />
+                </div>
+              </div>
+              <hr />
+              <div class="grid w-full py-4">
+                <p class="my-3 text-[24px] font-medium">
+                  Feedback: People love us.
+                </p>
+                <div class="grid justify-start py-4">
+                  <img
+                    src="https://images.unlayer.com/projects/15608/1651352929580-4.PNG"
+                    alt="traction-img"
+                  />
+                </div>
+              </div>
+              <hr />
+              <div class="grid w-full py-4">
+                <p class="my-3 text-[24px] font-medium">Predicted Growth</p>
+                <div class="grid justify-center py-4">
+                  <img
+                    class="mb-2"
+                    src="https://images.unlayer.com/projects/15608/1651352907089-1.PNG"
+                    alt="traction-img"
+                  />
+                  <img
+                    src="https://images.unlayer.com/projects/15608/1651352949305-7.png"
+                    alt="traction-img"
+                  />
+                </div>
+              </div>
+              <hr />
+              <div class="grid w-full py-4">
+                <p class="my-3 text-[24px] font-medium">Core Team</p>
+                <div class="grid justify-center py-4">
+                  <img
+                    src="https://images.unlayer.com/projects/15608/1651352986615-11.png"
+                    alt="traction-img"
+                  />
+                </div>
+              </div>
+              <hr />
+              <div class="grid w-full py-4">
+                <p class="my-3 text-[24px] font-medium">
+                  Documents for Investors
+                </p>
+                <div class="grid justify-start py-4">
+                  <ul class="list-disc text-[#2563eb]">
+                    <li>Due Diligence Report</li>
+                    <li>Certificate of Incorporation</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div id="details" style="display: none">
+              <div class="py-5 pt-10">
+                <p class="font-semibold">
+                  Meet our strong and visionary team members.
+                </p>
+              </div>
+              <!-- Profile Cards -->
+              <div
+                class="grid grid-col-1 py-5 md:grid-cols-2 justify-items-center md:space-x-6"
+              >
+                <div
+                  class="grid w-72 bg-white rounded-lg border border-gray-200 shadow-md py-4"
+                >
+                  <div class="flex flex-col items-center pb-10">
+                    <img
+                      class="mb-3 w-24 h-24 rounded-full shadow-lg"
+                      src="https://api.pepcorns.com/clientassets/icon1651231237314.jpg"
+                      alt="Manish Pratik"
+                    />
+                    <h5 class="mb-1 text-xl font-medium text-black">
+                      Manish Pratik
+                    </h5>
+                    <span class="text-sm text-gray-500 dark:text-gray-400"
+                      >CoFounder</span
+                    >
+                    <div class="flex mt-4 space-x-3 md:mt-6">
+                      <span class="flex flex-inline space-x-2 justify-center"
+                  ><a href="#" class="text-[#fe0000] hover:text-black"
+                    ><i class="fa fa-instagram" aria-hidden="true"></i></a
+                  ><a href="#" class="text-[#2563eb] hover:text-black"
+                    ><i
+                      class="fa fa-facebook-official"
+                      aria-hidden="true"
+                    ></i></a
+                  ><a
+                    href="https://youtu.be/biGcDeB2PbQ"
+                    class="text-[#fe0000] hover:text-black"
+                    ><i class="fa fa-youtube-play" aria-hidden="true"></i
+                  ></a>
+                </span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="grid place-content-center w-72 bg-white rounded-lg border border-gray-200 shadow-md py-4"
+                >
+                  <div class="flex flex-col items-center pb-10">
+                    <img
+                      class="mb-3 w-24 h-24 rounded-full shadow-lg"
+                      src="https://api.pepcorns.com/clientassets/icon1651243119561.jpg"
+                      alt="Manish Pratik"
+                    />
+                    <h5 class="mb-1 text-xl font-medium text-black">
+                      Gautam Menon
+                    </h5>
+                    <span class="text-sm text-gray-500 dark:text-gray-400"
+                      >CoFounder</span
+                    >
+                    <div class="flex mt-4 space-x-3 md:mt-6">
+                      <span class="flex flex-inline space-x-2 justify-center"
+                  ><a href="#" class="text-[#fe0000] hover:text-black"
+                    ><i class="fa fa-instagram" aria-hidden="true"></i></a
+                  ><a href="#" class="text-[#2563eb] hover:text-black"
+                    ><i
+                      class="fa fa-facebook-official"
+                      aria-hidden="true"
+                    ></i></a
+                  ><a
+                    href="https://youtu.be/biGcDeB2PbQ"
+                    class="text-[#fe0000] hover:text-black"
+                    ><i class="fa fa-youtube-play" aria-hidden="true"></i
+                  ></a>
+                </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- info -->
+              <div
+                class="information py-4 my-10 bg-[#ffffff] shadow-lg px-4 rounded-md border"
+              >
+                <p class="text-[18px]">
+                  This is how we will use funds : | Sales & Marketing - 50% |
+                  Human Resource-30% | Technology -10% | OPEX-10%
+                </p>
+              </div>
+              <!-- Details -->
+              <div class="mb-5 grid grid-cols-1 md:grid-cols-2 space-x-4">
+                <div
+                  class="grid px-4 py-4 bg-[#ffffff] shadow-lg border-t-4 border-indigo-500  rounded-md"
+                >
+                  <p class="text-[16px]">START DATE</p>
+                  <p class="text-[24px]">2022-06-26 16:38:05</p>
+                  <p class="text-[14px] py-2">Ends in 0 Days</p>
+                </div>
+                <div
+                  class="grid px-4 py-4 bg-[#ffffff] shadow-lg border-t-4 border-indigo-500  rounded-md"
+                >
+                  <p class="text-[16px]">TARGET RAISE</p>
+                  <p class="text-[24px]">50,00,000</p>
+                  <p class="text-[14px] py-2">0% Raised So far</p>
+                </div>
+              </div>
+              <!-- FAQ -->
+              <div
+                class="faq_container bg-[#ffffff] shadow-lg rounded-md border px-4 py-4 my-10"
+              >
+                <div class="text-center text-[24px] font-semibold py-4">
+                  Frequently Asked Questions:
+                </div>
+                <hr class="py-2" />
+                <div class="faq py-3 px-5">
+                  <div class="faq_question text-[16px] font-medium">
+                    What does your company do ?
+                  </div>
+                  <div class="faq_answer_container">
+                    <div class="faq_answer text-[14px] text-justify">
+                      LetzRent is an online search, compare & booking platform
+                      for self-drive car rental that rewards users for renting.
+                      We aggregate rental deals from multiple service providers
+                      and present them to users with prices, reviews & facts to
+                      make an informed decision. Currently running a pilot in
+                      Bangalore by aggregating Zoomcar, Avis, Mychoize &
+                      Wowcarz.
+                    </div>
+                  </div>
+                </div>
+                <div class="faq py-3 px-5">
+                  <div class="faq_question text-[16px] font-medium">
+                    Where do you want to be in 5 years ?
+                  </div>
+                  <div class="faq_answer_container">
+                    <div class="faq_answer text-[14px] text-justify">
+                      Uber for Self Drive Car Rental
+                    </div>
+                  </div>
+                </div>
+                <div class="faq py-3 px-5">
+                  <div class="faq_question text-[16px] font-medium">
+                    Why did you choose this idea, what's your biggest Obstacle?
+                  </div>
+                  <div class="faq_answer_container">
+                    <div class="faq_answer text-[14px] text-justify">
+                      Customers want low Prices: And to get low prices 85% of
+                      the consumers check at least 2 data points (Source: BCG
+                      Consumer Trends). In various sectors information-centred
+                      buying has been made more efficient by companies like MMT
+                      for Travel, Policy bazaar for Insurance, Myntra or
+                      Shopperstop for Lifestyle products. However, for rental
+                      products, there is no one & to fill this need and make the
+                      process efficient we launched Letzrent, hoping to have a
+                      first-mover advantage and dominate the market in t
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Updates -->
+            <div id="updates" class="my-4" style="display: none">
+              <div
+                class="py-10 px-2 bg-[#ffffff] shadow-lg rounded-lg border top-0"
+              >
+                <p class="py-2 text-[16px] text-center">
+                  There are no recent updates.
+                </p>
+                <hr />
+              </div>
+            </div>
+            <!-- Comment -->
+            <div id="comments" style="display: none" class="my-4">
+              <div
+                class="py-10 px-4 bg-[#ffffff] shadow-lg rounded-lg border top-0"
+              >
+                <p class="py-3 px-2">No comments found!</p>
+                <form class="flex items-center">
+                  <label for="voice-search" class="sr-only">Search</label>
+                  <div class="relative w-full">
+                    <input
+                      type="text"
+                      id="voice-search"
+                      class="border border-gray-300 text-black rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                      placeholder="Your thoughts..."
+                      required
+                    />
+                    <button
+                      type="button"
+                      class="flex absolute inset-y-0 right-0 items-center pr-3"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="w-4 h-4 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-black"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                  <button
+                    class="inline-flex items-center text-center w-32 py-2.5 px-3 ml-2 text-sm font-medium  text-white bg-[#96a3ed] rounded-lg border border hover:bg-[#065fd4]"
+                    type="button"
+                    data-modal-toggle="defaultModal"
+                  >
+                    <p class="w-full text-center">+ Post</p>
+                  </button>
+
+                  <!-- Main modal -->
+                  <div
+                    id="defaultModal"
+                    tabindex="1"
+                    class="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full justify-center items-center flex"
+                    aria-modal="false"
+                    role="dialog"
+                  >
+                    <div class="relative p-4 w-full max-w-2xl h-full md:h-auto">
+                      <!-- Modal content -->
+                      <div
+                        class="relative bg-white rounded-lg shadow-md"
+                      >
+                        <!-- Modal header -->
+                        <div
+                          class="flex justify-between items-start p-4 rounded-t border-b border"
+                        >
+                          <h3
+                            class="text-xl font-semibold text-black"
+                          >
+                            You haven't logged in yet.
+                          </h3>
+                          
+                        </div>
+                        <div
+                          class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200 "
+                        >
+                          
+                          <button
+                            data-modal-toggle="defaultModal"
+                            type="button"
+                            class="text-black hover:text-white border rounded-lg border border hover:bg-[#065fd4] text-sm px-5 py-2.5 text-center"
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Deal Terms -->
+        <div class="grid col-span-2 md:px-4 my-4">
+          <div class="slideshow-container relative sticky top-10">
+            <div class="">
+              <p class="text-[32px]">Deal Terms</p>
+              <p class="text-[14px] pb-2">
+                Perks you will receive for Investing Letzrent
+              </p>
+            </div>
+            <div class="slideshow-inner">
+              <div class="mySlides fade">
+                <div
+                  class="bg-[#ffffff] py-2 rounded-lg shadow-lg px-16 border py-10"
+                >
+                  <p class="text-[42px] font-medium text-black">&#8377; 2000</p>
+                  <p class="text-[16px] py-2">Invest</p>
+                  <ul class="list-disc py-4 text-[14px]">
+                    <li>LetzRent Premium Apparel (T-shirts & Coffee Mug)</li>
+                    <li>Early access to new features & promotions</li>
+                    <li>TNC : Limited to the first 100</li>
+                  </ul>
+                  <button
+                    class="bg-[#96a3ed] w-full py-2 my-4 rounded-md text-white font-medium hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  >
+                    Invest
+                  </button>
+                </div>
+              </div>
+
+              <div class="mySlides fade">
+                <div
+                  class="bg-[#ffffff] py-2 rounded-lg shadow-lg px-16 border py-10"
+                >
+                  <p class="text-[42px] font-medium text-black">&#8377; 5000</p>
+                  <p class="text-[16px] py-2">Invest</p>
+                  <ul class="list-disc py-4 text-[14px]">
+                    <li>
+                      LetzRent Premium Apparel Box (T-shirts, Sweatshirts &
+                      additional Swag)
+                    </li>
+                    <li>Early access to new features & promotions</li>
+                    <li>TNC : Limited to the first 200</li>
+                  </ul>
+                  <button
+                    class="bg-[#96a3ed] w-full py-2 my-4 rounded-md text-white font-medium hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  >
+                    Invest
+                  </button>
+                </div>
+              </div>
+
+              <div class="mySlides fade">
+                <div
+                  class="bg-[#ffffff] py-2 rounded-lg shadow-lg px-16 border py-10"
+                >
+                  <p class="text-[42px] font-medium text-black">
+                    &#8377; 10,000
+                  </p>
+                  <p class="text-[16px] py-2">Invest</p>
+                  <ul class="list-disc py-4 text-[14px]">
+                    <li>
+                      Exclusive interest in owning equity with an investment of
+                      ₹50,000 — ₹2,00,000
+                    </li>
+                    <li>Invite to exclusive LetzRent team chat</li>
+                    <li>
+                      LetzRent Premium Apparel Box (T-shirts, Sweatshirts &
+                      additional Swag)
+                    </li>
+                    <li>Early access to new features & promotions</li>
+                    <li>
+                      TNC : Equity benefits with no voting rights. Limited to
+                      the first 5 investors.
+                    </li>
+                  </ul>
+                  <button
+                    class="bg-[#96a3ed] w-full py-2 my-4 rounded-md text-white font-medium hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  >
+                    Invest
+                  </button>
+                </div>
+              </div>
+
+              <div class="mySlides fade">
+                <div
+                  class="bg-[#ffffff] py-2 rounded-lg shadow-lg px-16 border py-10"
+                >
+                  <p class="text-[42px] font-medium text-black">
+                    &#8377; 25,000
+                  </p>
+                  <p class="text-[16px] py-2">Invest</p>
+                  <ul class="list-disc py-4 text-[14px]">
+                    <li>
+                      Exclusive interest in owning equity with an investment of
+                      ₹3,00,000 — ₹10,00,000
+                    </li>
+                    <li>One-on-one 30 minute video call with Co-Founders</li>
+                    <li>Invite to exclusive LetzRent team chat</li>
+                    <li>
+                      LetzRent Premium Apparel Box (T-shirts, Sweatshirts &
+                      additional Swag)
+                    </li>
+                    <li>Early access to new features & promotions</li>
+                    <li>
+                      TNC : Equity benefits with no voting rights. Limited to
+                      the first 5 investors.
+                    </li>
+                  </ul>
+                  <button
+                    class="bg-[#96a3ed] w-full py-2 my-4 rounded-md text-white font-medium hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  >
+                    Invest
+                  </button>
+                </div>
+              </div>
+              <div class="mySlides fade">
+                <div
+                  class="bg-[#ffffff] py-2 rounded-lg shadow-lg px-16 border py-10"
+                >
+                  <p class="text-[42px] font-medium text-black">
+                    &#8377; 50,000
+                  </p>
+                  <p class="text-[16px] py-2">Invest</p>
+                  <ul class="list-disc py-4 text-[14px]">
+                    <li>
+                      Exclusive interest in owning equity with an investment of
+                      ₹11,00,000 — ₹30,00,000
+                    </li>
+                    <li>
+                      In-Person dinner with Co-Founder in Whitefield, Bangalore
+                      • One-on-one 30 minute video call with Co-Founders
+                    </li>
+                    <li>Invite to exclusive LetzRent team chat</li>
+                    <li>
+                      LetzRent Premium Apparel Box (T-shirts, Sweatshirts &
+                      additional Swag)
+                    </li>
+                    <li>Early access to new features & promotions</li>
+                    <li>
+                      TNC : Equity benefits with voting rights. Limited to the
+                      first 5 investors.
+                    </li>
+                  </ul>
+                  <button
+                    class="bg-[#96a3ed] w-full py-2 my-4 rounded-md text-white font-medium hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  >
+                    Invest
+                  </button>
+                </div>
+              </div>
+              <div class="mySlides fade">
+                <div
+                  class="bg-[#ffffff] py-2 rounded-lg shadow-lg px-16 border py-10"
+                >
+                  <p class="text-[42px] font-medium text-black">
+                    &#8377; 1,00,000
+                  </p>
+                  <p class="text-[16px] py-2">Invest</p>
+                  <ul class="list-disc py-4 text-[14px]">
+                    <li>
+                      Exclusive interest in owning equity with an investment of
+                      above ₹40,00,000
+                    </li>
+                    <li>LetzRent Weekend Experience: Flight & Hotel on us</li>
+                    <li>
+                      In-Person dinner with Co-Founder in Whitefield, Bangalore
+                      • One-on-one 30 minute video call with Co-Founders
+                    </li>
+                    <li>Invite to exclusive LetzRent team chat</li>
+                    <li>
+                      LetzRent Premium Apparel Box (T-shirts, Sweatshirts &
+                      additional Swag)
+                    </li>
+                    <li>Early access to new features & promotions</li>
+                    <li>
+                      TNC : Equity benefits with voting rights(open for
+                      discussion of term sheet). Limited to the first 2
+                      investors.
+                    </li>
+                  </ul>
+                  <button
+                    class="bg-[#96a3ed] w-full py-2 my-4 rounded-md text-white font-medium hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  >
+                    Invest
+                  </button>
+                </div>
+              </div>
+            </div>
+            <a
+              class="prev absolute top-56 left-4 text-[24px]"
+              onclick="plusSlides(-1)"
+              >&#10094;</a
+            >
+            <a
+              class="next absolute top-56 right-4 text-[24px]"
+              onclick="plusSlides(1)"
+              >&#10095;</a
+            >
+          </div>
+          <br />
+          <div style="text-align: center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+      charset="utf-8"
+    ></script>
+    <script>
+      function openDropdown(event, dropdownID) {
+        let element = event.target;
+        while (element.nodeName !== "BUTTON") {
+          element = element.parentNode;
+        }
+        var popper = Popper.createPopper(
+          element,
+          document.getElementById(dropdownID),
+          {
+            placement: "bottom-start",
+          }
+        );
+        document.getElementById(dropdownID).classList.toggle("hidden");
+        document.getElementById(dropdownID).classList.toggle("block");
+      }
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(".faq_question").click(function () {
+          if ($(this).parent().is(".open")) {
+            $(this)
+              .closest(".faq")
+              .find(".faq_answer_container")
+              .animate({ height: "0" }, 500);
+            $(this).closest(".faq").removeClass("open");
+          } else {
+            var newHeight =
+              $(this).closest(".faq").find(".faq_answer").height() + "px";
+            $(this)
+              .closest(".faq")
+              .find(".faq_answer_container")
+              .animate({ height: newHeight }, 500);
+            $(this).closest(".faq").addClass("open");
+          }
+        });
+      });
+    </script>
+
+    <script>
+      var slideIndex = 1;
+
+      var myTimer;
+
+      var slideshowContainer;
+
+      window.addEventListener("load", function () {
+        showSlides(slideIndex);
+        myTimer = setInterval(function () {
+          plusSlides(1);
+        }, 4000);
+
+        //COMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+        slideshowContainer =
+          document.getElementsByClassName("slideshow-inner")[0];
+
+        //UNCOMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+        // slideshowContainer = document.getElementsByClassName('slideshow-container')[0];
+
+        slideshowContainer.addEventListener("mouseenter", pause);
+        slideshowContainer.addEventListener("mouseleave", resume);
+      });
+
+      // NEXT AND PREVIOUS CONTROL
+      function plusSlides(n) {
+        clearInterval(myTimer);
+        if (n < 0) {
+          showSlides((slideIndex -= 1));
+        } else {
+          showSlides((slideIndex += 1));
+        }
+
+        //COMMENT OUT THE LINES BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+
+        if (n === -1) {
+          myTimer = setInterval(function () {
+            plusSlides(n + 2);
+          }, 4000);
+        } else {
+          myTimer = setInterval(function () {
+            plusSlides(n + 1);
+          }, 4000);
+        }
+      }
+
+      //Controls the current slide and resets interval if needed
+      function currentSlide(n) {
+        clearInterval(myTimer);
+        myTimer = setInterval(function () {
+          plusSlides(n + 1);
+        }, 4000);
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+
+      pause = () => {
+        clearInterval(myTimer);
+      };
+
+      resume = () => {
+        clearInterval(myTimer);
+        myTimer = setInterval(function () {
+          plusSlides(slideIndex);
+        }, 4000);
+      };
+    </script>
+     <script>
+      function pitch() {
+        var pitch = document.getElementById("pitch");
+        var details = document.getElementById("details");
+        var updates = document.getElementById("updates");
+        var comments = document.getElementById("comments");
+        if (pitch.style.display === "none") {
+          pitch.style.display = "block";
+          details.style.display = "none";
+          updates.style.display = "none";
+          comments.style.display = "none";
+        } else {
+          pitch.style.display = "none";
+        }
+      }
+      function details() {
+        var pitch = document.getElementById("pitch");
+        var details = document.getElementById("details");
+        var updates = document.getElementById("updates");
+        var comments = document.getElementById("comments");
+        if (details.style.display === "none") {
+          details.style.display = "block";
+          pitch.style.display = "none";
+          updates.style.display = "none";
+          comments.style.display = "none";
+        } else {
+          details.style.display = "none";
+        }
+      }
+      function updates() {
+        var pitch = document.getElementById("pitch");
+        var details = document.getElementById("details");
+        var updates = document.getElementById("updates");
+        var comments = document.getElementById("comments");
+        if (updates.style.display === "none") {
+          updates.style.display = "block";
+          pitch.style.display = "none";
+          details.style.display = "none";
+          comments.style.display = "none";
+        } else {
+          updates.style.display = "none";
+        }
+      }
+      function comments() {
+        var pitch = document.getElementById("pitch");
+        var details = document.getElementById("details");
+        var updates = document.getElementById("updates");
+        var comments = document.getElementById("comments");
+        if (comments.style.display === "none") {
+          comments.style.display = "block";
+          pitch.style.display = "none";
+          updates.style.display = "none";
+          details.style.display = "none";
+        } else {
+          comments.style.display = "none";
+        }
+      }
+    </script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyCZRYL1ox5qDIuBGOTt9bm1a0AY6glH6CY",
+        authDomain: "pepcorns-f7635.firebaseapp.com",
+        projectId: "pepcorns-f7635",
+        storageBucket: "pepcorns-f7635.appspot.com",
+        messagingSenderId: "105168130183",
+        appId: "1:105168130183:web:c2a69689151bef02ede822",
+        measurementId: "G-TFZ9D9F4FJ"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+  </body>
+
+ 
+</html>
